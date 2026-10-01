@@ -2680,3 +2680,95 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 8px 24px -2px rgba(23, 35, 60, 0.06);
 }
+
+
+/* ==========================================================================
+   NAVIGATION BAR: PERFECT HARMONY & ALIGNMENT
+   "About" to "Let's Connect" grouped with clean spacing, perfectly aligned
+   ========================================================================== */
+
+.desktop-nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .desktop-nav {
+    display: flex;
+  }
+}
+
+.nav-links {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important; /* Closer together, not tightly packed */
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 4px 6px !important;
+  background-color: rgba(23, 35, 60, 0.03); /* Subtle unified dock track */
+  border-radius: 9999px;
+  border: 1px solid rgba(23, 35, 60, 0.05);
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 36px !important;
+  padding: 0 15px !important;
+  border-radius: 9999px !important;
+  font-size: 0.845rem !important;
+  font-weight: 500 !important;
+  color: var(--color-slate) !important;
+  letter-spacing: -0.01em !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  transition: all 0.18s cubic-bezier(0.2, 0, 0, 1) !important;
+  position: relative !important;
+}
+
+.nav-link:hover {
+  color: var(--color-navy) !important;
+  background-color: rgba(23, 35, 60, 0.06) !important;
+}
+
+.nav-link.active {
+  color: var(--color-navy) !important;
+  font-weight: 600 !important;
+  background-color: var(--color-white) !important;
+  box-shadow: 0 1px 4px rgba(23, 35, 60, 0.08) !important;
+}
+
+.nav-link::after {
+  display: none !important; /* Remove any underline relics */
+}
+
+/* "Let's Connect" distinct pill styling */
+.nav-link.nav-link--highlight {
+  color: var(--color-navy) !important;
+  font-weight: 600 !important;
+  background-color: rgba(217, 140, 154, 0.15) !important;
+  border: 1px solid rgba(217, 140, 154, 0.3) !important;
+  margin-left: 2px !important;
+}
+
+.nav-link.nav-link--highlight:hover {
+  background-color: rgba(217, 140, 154, 0.25) !important;
+  border-color: rgba(217, 140, 154, 0.5) !important;
+  color: var(--color-navy) !important;
+}
+
+.nav-link.nav-link--highlight.active {
+  background-color: var(--color-rose) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-rose) !important;
+}
