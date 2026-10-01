@@ -17,9 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Data Loader & Convex Cloud Integration
   // --------------------------------------------------------------------------
   async function fetchFromConvex() {
-    // 1. Try Convex Site HTTP endpoint
+    // 1. Try Convex Site HTTP endpoint (with cache-buster to always get freshest data)
     try {
-      const res = await fetch(`${CONVEX_SITE_URL}/get-portfolio`);
+      const res = await fetch(`${CONVEX_SITE_URL}/get-portfolio?_t=${Date.now()}`, {
+        cache: 'no-store'
+      });
       if (res.ok) {
         const json = await res.json();
         if (json && json.data) return json.data;
@@ -31,7 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const res = await fetch(`${CONVEX_CLOUD_URL}/api/query`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ path: 'portfolio:get', args: {} })
+        body: JSON.stringify({ path: 'portfolio:get', args: {} }),
+        cache: 'no-store'
       });
       if (res.ok) {
         const json = await res.json();
