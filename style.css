@@ -2476,3 +2476,207 @@ body {
   color: var(--color-navy);
   margin-bottom: 12px;
 }
+
+
+/* ==========================================================================
+   GOOGLE MATERIAL DESIGN 3 (M3) INFUSION
+   Tonal surface hierarchy, M3 pill containers, emphasized easing, and chips
+   ========================================================================== */
+
+:root {
+  /* M3 Motion & Easing Tokens */
+  --m3-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --m3-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --m3-duration-short: 200ms;
+  --m3-duration-medium: 300ms;
+
+  /* M3 Tonal Surfaces derived from Warm Ivory */
+  --m3-surface: #F8F6F1;
+  --m3-surface-container-lowest: #FFFFFF;
+  --m3-surface-container-low: #FAF8F4;
+  --m3-surface-container: #F4F0E8;
+  --m3-surface-container-high: #EFE9DF;
+  --m3-surface-container-highest: #E8E2D6;
+
+  /* M3 Outlines */
+  --m3-outline: rgba(23, 35, 60, 0.12);
+  --m3-outline-variant: rgba(23, 35, 60, 0.07);
+
+  /* M3 Shape System */
+  --m3-shape-small: 8px;
+  --m3-shape-medium: 14px;
+  --m3-shape-large: 20px;
+  --m3-shape-extra-large: 28px;
+  --m3-shape-full: 9999px;
+}
+
+/* M3 Top App Bar & Pill Navigation */
+.site-header {
+  background-color: rgba(248, 246, 241, 0.9);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--m3-outline-variant);
+}
+
+.brand-monogram {
+  border-radius: var(--m3-shape-medium);
+  box-shadow: 0 1px 3px rgba(23, 35, 60, 0.1);
+  transition: transform var(--m3-duration-short) var(--m3-easing-standard), background-color var(--m3-duration-short);
+}
+
+/* M3 Nav Link Chips */
+.nav-link {
+  padding: 8px 18px;
+  border-radius: var(--m3-shape-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color var(--m3-duration-short) var(--m3-easing-standard), color var(--m3-duration-short);
+  position: relative;
+}
+
+.nav-link:hover {
+  background-color: rgba(23, 35, 60, 0.06);
+  color: var(--color-navy);
+}
+
+.nav-link.active {
+  background-color: var(--m3-surface-container-high);
+  color: var(--color-navy);
+  font-weight: 600;
+}
+
+/* M3 Filled & Tonal Pill Buttons */
+.btn {
+  border-radius: var(--m3-shape-full);
+  padding: 12px 26px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: all var(--m3-duration-short) var(--m3-easing-emphasized);
+}
+
+.btn-primary {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border: none;
+  box-shadow: 0 1px 3px rgba(23, 35, 60, 0.15), 0 4px 12px rgba(23, 35, 60, 0.08);
+}
+
+.btn-primary:hover {
+  background-color: #26385C;
+  box-shadow: 0 2px 6px rgba(23, 35, 60, 0.2), 0 8px 20px rgba(23, 35, 60, 0.12);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--m3-surface-container-lowest);
+  border: 1px solid var(--m3-outline);
+  color: var(--color-navy);
+  box-shadow: 0 1px 2px rgba(23, 35, 60, 0.04);
+}
+
+.btn-secondary:hover {
+  background-color: var(--m3-surface-container-low);
+  border-color: var(--color-navy);
+  transform: translateY(-1px);
+}
+
+/* M3 Hero Portrait Container (Large Pill / Smooth Rounded Rect) */
+.hero-frame-inner {
+  border-radius: var(--m3-shape-extra-large);
+  overflow: hidden;
+  background-color: var(--m3-surface-container-lowest);
+  padding: 8px;
+  border: 1px solid var(--m3-outline-variant);
+  box-shadow: 0 4px 24px -2px rgba(23, 35, 60, 0.07), 0 1px 4px rgba(23, 35, 60, 0.03);
+  transition: all var(--m3-duration-medium) var(--m3-easing-emphasized);
+}
+
+.hero-frame-inner:hover {
+  box-shadow: 0 12px 36px -4px rgba(23, 35, 60, 0.11), 0 2px 8px rgba(23, 35, 60, 0.04);
+  transform: translateY(-3px);
+}
+
+.hero-frame-inner img {
+  border-radius: calc(var(--m3-shape-extra-large) - 8px);
+}
+
+/* M3 Filter Chips (Segmented Pill Controls) */
+.filter-tabs {
+  background-color: var(--m3-surface-container);
+  border-radius: var(--m3-shape-full);
+  padding: 5px;
+  gap: 6px;
+  border: 1px solid var(--m3-outline-variant);
+}
+
+.filter-btn {
+  border-radius: var(--m3-shape-full);
+  padding: 8px 20px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-slate);
+  transition: all var(--m3-duration-short) var(--m3-easing-standard);
+}
+
+.filter-btn:hover {
+  background-color: rgba(23, 35, 60, 0.05);
+  color: var(--color-navy);
+}
+
+.filter-btn.active {
+  background-color: var(--m3-surface-container-lowest);
+  color: var(--color-navy);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(23, 35, 60, 0.08);
+}
+
+/* M3 Project Cards (Outlined + Elevated Container) */
+.project-card {
+  border-radius: var(--m3-shape-large);
+  border: 1px solid var(--m3-outline-variant);
+  background-color: var(--m3-surface-container-lowest);
+  box-shadow: 0 2px 8px rgba(23, 35, 60, 0.03);
+  transition: transform var(--m3-duration-medium) var(--m3-easing-emphasized),
+              box-shadow var(--m3-duration-medium) var(--m3-easing-emphasized),
+              border-color var(--m3-duration-medium) var(--m3-easing-emphasized);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(23, 35, 60, 0.16);
+  box-shadow: 0 14px 32px -4px rgba(23, 35, 60, 0.08), 0 2px 6px rgba(23, 35, 60, 0.03);
+}
+
+.tag-badge {
+  border-radius: var(--m3-shape-full);
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* M3 Assist Chips / Action Badges */
+.status-indicator-badge {
+  border-radius: var(--m3-shape-full);
+  background-color: var(--m3-surface-container-lowest);
+  border: 1px solid var(--m3-outline);
+  box-shadow: 0 1px 3px rgba(23, 35, 60, 0.04);
+}
+
+.btn-resume-trigger, .btn-dashboard-trigger {
+  border-radius: var(--m3-shape-full);
+  padding: 8px 16px;
+}
+
+/* M3 Philosophy Step Cards */
+.philosophy-card {
+  border-radius: var(--m3-shape-large);
+  border: 1px solid var(--m3-outline-variant);
+  background-color: var(--m3-surface-container-lowest);
+  transition: all var(--m3-duration-medium) var(--m3-easing-emphasized);
+}
+
+.philosophy-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px -2px rgba(23, 35, 60, 0.06);
+}
