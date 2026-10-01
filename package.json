@@ -1,0 +1,9 @@
+{
+  "name": "jay-s-portfolio",
+  "version": "1.0.0",
+  "description": "Janette Amoatemaa Sarfo — UI/UX Portfolio with Convex Cloud backend",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 8000"
+  }
+}

@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janette Amoatemaa Sarfo — UI/UX Designer &amp; CS Student</title>
+  <meta name="description" content="Portfolio of Janette Amoatemaa Sarfo. UI/UX Designer and Computer Science student crafting thoughtful digital products, accessible academic systems, and bespoke digital commerce. Warm Digital Editorial aesthetic.">
+  <meta name="keywords" content="Janette Amoatemaa Sarfo, UI/UX Designer, Product Designer, Computer Science, Warm Digital Editorial, Ghana, UENR, Portfolio, Figma, User Experience">
+  <meta name="author" content="Janette Amoatemaa Sarfo">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Janette Amoatemaa Sarfo — UI/UX Portfolio">
+  <meta property="og:description" content="I think deeply about people, systems, and experiences — and I turn that thinking into thoughtful digital products.">
+  <meta property="og:image" content="assets/images/janette-portrait.jpg">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2317233C'/><text x='50%' y='63%' font-family='serif' font-size='55' font-weight='600' fill='%23F8F6F1' text-anchor='middle'>J</text><circle cx='76' cy='32' r='7' fill='%23D98C9A'/></svg>">
+
+  <!-- Google Fonts: DM Serif Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Toast Notification Container -->
+  <div id="toastNotification" class="toast-notification" role="status" aria-live="polite"></div>
+
+  <!-- NAVIGATION -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner container">
+      <a href="#hero" class="brand-signature" aria-label="Janette Amoatemaa Sarfo - Back to top">
+        <span class="brand-monogram">JS</span>
+        <span class="brand-name">Janette Amoatemaa Sarfo</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#work" class="nav-link">Selected Work</a></li>
+          <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
+          <li><a href="#credentials" class="nav-link">Background</a></li>
+          <li><a href="#contact" class="nav-link nav-link--highlight">Let's Connect</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Action Group -->
+      <div class="header-action-group">
+        <div class="status-indicator-badge" title="Currently open for UI/UX internships & collaborative projects">
+          <span class="status-dot"></span>
+          <span class="status-text">Available for 2026/2027</span>
+        </div>
+        <button type="button" class="btn-resume-trigger" id="openResumeBtn" aria-label="View Resume & Qualifications">
+          <span>CV / Resume</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <nav class="mobile-drawer-nav">
+        <ul>
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#work" class="mobile-nav-link">Selected Work</a></li>
+          <li><a href="#philosophy" class="mobile-nav-link">Design Philosophy</a></li>
+          <li><a href="#credentials" class="mobile-nav-link">Background & Skills</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Get in Touch</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <p class="mobile-time-display">Local Time (GMT): <span id="mobileLocalTime">--:--</span></p>
+          <button type="button" class="btn-secondary w-full" id="mobileResumeBtn">Preview Full Resume</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- SECTION 1: HERO (#F8F6F1) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container container">
+        <div class="hero-content">
+          <!-- Small Label with Muted Gold & Dusty Rose touches -->
+          <div class="hero-badge">
+            <span class="gold-sparkle" aria-hidden="true">✦</span>
+            <span class="badge-text">UI/UX Designer <span class="badge-sep">·</span> Computer Science Student</span>
+          </div>
+
+          <h1 class="hero-title">
+            I think deeply about <span class="title-serif italic">people</span>, <span class="title-serif">systems</span>, and <span class="title-serif italic accent-rose">experiences</span> — and craft thoughtful digital products.
+          </h1>
+
+          <p class="hero-lead">
+            Welcome to my personal studio space. I bridge human behavior research with structured computer science principles to build interfaces that feel effortless, respectful, and aesthetically mature.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#work" class="btn btn-primary" id="heroViewWorkBtn">
+              <span>Explore Selected Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#about" class="btn btn-secondary">
+              <span>Designer's Philosophy</span>
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-value">3+</span>
+              <span class="metric-label">In-depth Design Systems</span>
+            </div>
+            <div class="metric-divider" aria-hidden="true"></div>
+            <div class="metric-item">
+              <span class="metric-value">15k+</span>
+              <span class="metric-label">Students Impacted (UENR Portal)</span>
+            </div>
+            <div class="metric-divider" aria-hidden="true"></div>
+            <div class="metric-item">
+              <span class="metric-value">CS + UX</span>
+              <span class="metric-label">Dual Architecture Foundation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-frame">
+            <div class="hero-frame-inner">
+              <img 
+                src="assets/images/janette-portrait.jpg" 
+                alt="Portrait of Janette Amoatemaa Sarfo in her design studio sketching UX wireframes" 
+                class="hero-portrait-img"
+                width="600"
+                height="800"
+                loading="eager"
+              >
+            </div>
+            <div class="hero-floating-card">
+              <div class="floating-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
+              </div>
+              <div class="floating-info">
+                <span class="floating-sub">Focus Area</span>
+                <strong class="floating-title">Design Systems &amp; Cognitive Ergonomics</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee Ribbon -->
+      <div class="studio-ribbon" aria-hidden="true">
+        <div class="ribbon-track">
+          <span>Interaction Architecture</span>
+          <span class="ribbon-dot">•</span>
+          <span>User Research &amp; Field Studies</span>
+          <span class="ribbon-dot">•</span>
+          <span>Design Systems &amp; Tokens</span>
+          <span class="ribbon-dot">•</span>
+          <span>Accessible Academic Systems</span>
+          <span class="ribbon-dot">•</span>
+          <span>AgriTech Logistics UX</span>
+          <span class="ribbon-dot">•</span>
+          <span>Bespoke Fashion E-Commerce</span>
+          <span class="ribbon-dot">•</span>
+          <span>Computer Science Mindset</span>
+          <span class="ribbon-dot">•</span>
+          <!-- Duplicate for seamless loop -->
+          <span>Interaction Architecture</span>
+          <span class="ribbon-dot">•</span>
+          <span>User Research &amp; Field Studies</span>
+          <span class="ribbon-dot">•</span>
+          <span>Design Systems &amp; Tokens</span>
+          <span class="ribbon-dot">•</span>
+          <span>Accessible Academic Systems</span>
+          <span class="ribbon-dot">•</span>
+          <span>AgriTech Logistics UX</span>
+          <span class="ribbon-dot">•</span>
+          <span>Bespoke Fashion E-Commerce</span>
+          <span class="ribbon-dot">•</span>
+          <span>Computer Science Mindset</span>
+          <span class="ribbon-dot">•</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT / THE DESIGNER'S SPACE (#FFFFFF) -->
+    <section class="section-about bg-white" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow-tag">
+            <span class="tag-accent-circle rose" aria-hidden="true"></span>
+            <span>About The Designer</span>
+          </div>
+          <h2 class="section-title">
+            Where human empathy meets <span class="italic accent-navy">algorithmic clarity</span>.
+          </h2>
+          <p class="section-subtitle">
+            A creative studio grounded in user advocacy and technical feasibility.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-bio-card card">
+            <span class="gold-badge-tiny">Creative Profile</span>
+            <h3 class="card-headline">I design products that honor human attention and solve genuine operational friction.</h3>
+            
+            <p class="card-paragraph">
+              I am Janette Amoatemaa Sarfo — a UI/UX designer and Computer Science student. My practice centers on the intersection of human cognitive patterns, systemic information architecture, and real-world utility.
+            </p>
+
+            <p class="card-paragraph">
+              Having a technical background in computer science means I don't just hand off pretty mockups. I consider state transitions, component reusability, edge cases, latency implications, and accessibility standards from the very first sketch.
+            </p>
+
+            <div class="personal-values-list">
+              <div class="value-item">
+                <span class="value-number">01</span>
+                <div>
+                  <strong>Intentional Over Trendy</strong>
+                  <p>Every line, whitespace margin, and color accent exists for cognitive clarity, not aesthetic superficiality.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-number">02</span>
+                <div>
+                  <strong>Deep Contextual Empathy</strong>
+                  <p>Whether examining high-stress university exam anxiety or local farm distribution routes, I ground designs in real human contexts.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-number">03</span>
+                <div>
+                  <strong>Feasible &amp; Systematic</strong>
+                  <p>Design systems constructed with engineering logic: modular tokens, scalable variants, and clean component contracts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-pillars-stack">
+            <!-- Pillar 1: CS Foundation -->
+            <div class="pillar-card card">
+              <div class="pillar-header">
+                <div class="pillar-icon navy-bg" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <div>
+                  <h4 class="pillar-title">Computer Science Discipline</h4>
+                  <span class="pillar-subtitle">Algorithms, Data Structures &amp; Frontend Systems</span>
+                </div>
+              </div>
+              <p class="pillar-desc">
+                Understanding algorithmic complexity and browser mechanics allows me to design UI components that are frictionless for engineers to implement and performant on low-bandwidth networks.
+              </p>
+              <div class="pill-group">
+                <span class="skill-pill">Component Architecture</span>
+                <span class="skill-pill">State Modeling</span>
+                <span class="skill-pill">Responsive Layouts</span>
+                <span class="skill-pill">WCAG 2.1 AA</span>
+              </div>
+            </div>
+
+            <!-- Pillar 2: UX Research -->
+            <div class="pillar-card card">
+              <div class="pillar-header">
+                <div class="pillar-icon rose-bg" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <div>
+                  <h4 class="pillar-title">User Experience Research</h4>
+                  <span class="pillar-subtitle">Field Inquiries, Heuristic Audits &amp; Usability Labs</span>
+                </div>
+              </div>
+              <p class="pillar-desc">
+                Uncovering unspoken user frustrations through qualitative observation, contextual inquiry, and usability testing to validate assumptions prior to pixel-level investment.
+              </p>
+              <div class="pill-group">
+                <span class="skill-pill">Contextual Inquiry</span>
+                <span class="skill-pill">Information Architecture</span>
+                <span class="skill-pill">Task Flow Analysis</span>
+                <span class="skill-pill">A/B Usability Testing</span>
+              </div>
+            </div>
+
+            <!-- Pillar 3: Tooling & Craft -->
+            <div class="pillar-card card">
+              <div class="pillar-header">
+                <div class="pillar-icon periwinkle-bg" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                </div>
+                <div>
+                  <h4 class="pillar-title">Interface Craft &amp; Prototyping</h4>
+                  <span class="pillar-subtitle">High-Fidelity Systems &amp; Micro-Interactions</span>
+                </div>
+              </div>
+              <p class="pillar-desc">
+                Crafting polished visual systems with distinct character, rigorous auto-layout structures, interactive micro-states, and design token libraries.
+              </p>
+              <div class="pill-group">
+                <span class="skill-pill">Figma Advanced Autolayout</span>
+                <span class="skill-pill">Design Tokens</span>
+                <span class="skill-pill">Interactive Prototypes</span>
+                <span class="skill-pill">Micro-Animations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SELECTED WORK (#F8F6F1) -->
+    <section class="section-work bg-ivory" id="work">
+      <div class="container">
+        <div class="work-section-top">
+          <div class="section-header text-left">
+            <div class="eyebrow-tag">
+              <span class="tag-accent-circle periwinkle" aria-hidden="true"></span>
+              <span>Case Studies &amp; Projects</span>
+            </div>
+            <h2 class="section-title">
+              Selected <span class="italic accent-rose">Work</span>
+            </h2>
+            <p class="section-subtitle">
+              Each product embodies its own distinct visual system, thoughtfully tailored to its domain, users, and business objectives.
+            </p>
+          </div>
+
+          <!-- Project Filter Controls -->
+          <div class="work-filters" role="tablist" aria-label="Project Categories">
+            <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Case Studies (3)</button>
+            <button type="button" class="filter-btn" data-filter="academic" role="tab" aria-selected="false">Academic Systems</button>
+            <button type="button" class="filter-btn" data-filter="agri" role="tab" aria-selected="false">AgriTech &amp; Logistics</button>
+            <button type="button" class="filter-btn" data-filter="commerce" role="tab" aria-selected="false">Bespoke Fashion</button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectsContainer">
+          <!-- PROJECT 1: UENR Examination Platform -->
+          <article class="project-card project-card--uenr card" data-category="academic" id="project-uenr">
+            <div class="project-visual-wrapper">
+              <img 
+                src="assets/images/uenr-exam.jpg" 
+                alt="UENR Examination Platform UI mockup on laptop and tablet" 
+                class="project-img" 
+                loading="lazy"
+                width="800"
+                height="450"
+              >
+              <div class="project-overlay-badge">
+                <span class="domain-tag">Higher Education · Web Platform</span>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <div class="project-meta-bar">
+                <span class="project-client">University of Energy &amp; Natural Resources</span>
+                <span class="meta-dot" aria-hidden="true">•</span>
+                <span class="project-role">Lead UI/UX Designer &amp; Information Architect</span>
+              </div>
+
+              <h3 class="project-name">UENR Examination Platform</h3>
+              <p class="project-tagline">
+                Calming high-stakes anxiety: Redesigning academic assessments for 15,000+ university students with cognitive focus states and zero-data-loss resilience.
+              </p>
+
+              <!-- Bespoke Color System Tagging -->
+              <div class="project-palette-preview" title="Project Visual Identity: Deep Navy, Digital Blue, White, Subtle Periwinkle">
+                <span class="palette-swatch" style="background-color: #0F1D36;" title="Deep Navy (#0F1D36)"></span>
+                <span class="palette-swatch" style="background-color: #2563EB;" title="Digital Blue (#2563EB)"></span>
+                <span class="palette-swatch" style="background-color: #8D9CCB;" title="Subtle Periwinkle (#8D9CCB)"></span>
+                <span class="palette-swatch" style="background-color: #FFFFFF; border: 1px solid #ddd;" title="Clean White (#FFFFFF)"></span>
+                <span class="palette-desc">Academic Clarity System</span>
+              </div>
+
+              <div class="project-key-stats">
+                <div class="key-stat">
+                  <strong>99.8%</strong>
+                  <span>Assessment Completion Rate</span>
+                </div>
+                <div class="key-stat">
+                  <strong>-42%</strong>
+                  <span>Reported Test Anxiety Friction</span>
+                </div>
+                <div class="key-stat">
+                  <strong>Zero</strong>
+                  <span>Session Submission Loss</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="btn btn-primary open-case-study-btn" data-project="uenr" id="viewUenrStudyBtn">
+                  <span>View Complete Case Study</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+                <button type="button" class="btn btn-ghost open-prototype-quickview" data-project="uenr" aria-label="Quick preview of UENR design system">
+                  <span>Design Highlights</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Yɛn Egg Co. -->
+          <article class="project-card project-card--yen card" data-category="agri" id="project-yen">
+            <div class="project-visual-wrapper">
+              <img 
+                src="assets/images/yen-egg.jpg" 
+                alt="Yɛn Egg Co. fresh harvest subscription app UI on tablet and smartphone" 
+                class="project-img" 
+                loading="lazy"
+                width="800"
+                height="450"
+              >
+              <div class="project-overlay-badge">
+                <span class="domain-tag">AgriTech &amp; Fresh Supply · Tablet/Mobile</span>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <div class="project-meta-bar">
+                <span class="project-client">Yɛn Agricultural Logistics</span>
+                <span class="meta-dot" aria-hidden="true">•</span>
+                <span class="project-role">End-to-End Product Designer</span>
+              </div>
+
+              <h3 class="project-name">Yɛn Egg Co.</h3>
+              <p class="project-tagline">
+                Farm-to-table transparency: Empowering poultry farmers with digital harvest scheduling and subscription tracking for urban Ghanaian households.
+              </p>
+
+              <!-- Bespoke Color System Tagging -->
+              <div class="project-palette-preview" title="Project Visual Identity: Cream, Sage, Charcoal, Natural Tones">
+                <span class="palette-swatch" style="background-color: #FBF8F2; border: 1px solid #ddd;" title="Farm Cream (#FBF8F2)"></span>
+                <span class="palette-swatch" style="background-color: #4E6A55;" title="Organic Sage (#4E6A55)"></span>
+                <span class="palette-swatch" style="background-color: #232724;" title="Charcoal Ink (#232724)"></span>
+                <span class="palette-swatch" style="background-color: #D4A373;" title="Warm Earth (#D4A373)"></span>
+                <span class="palette-desc">Earth &amp; Agriculture Palette</span>
+              </div>
+
+              <div class="project-key-stats">
+                <div class="key-stat">
+                  <strong>3.4x</strong>
+                  <span>Repeat Subscription Rate</span>
+                </div>
+                <div class="key-stat">
+                  <strong>35 min</strong>
+                  <span>Saved Daily Per Logistics Driver</span>
+                </div>
+                <div class="key-stat">
+                  <strong>100%</strong>
+                  <span>Harvest Batch Traceability</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="btn btn-primary open-case-study-btn" data-project="yen" id="viewYenStudyBtn">
+                  <span>View Complete Case Study</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+                <button type="button" class="btn btn-ghost open-prototype-quickview" data-project="yen" aria-label="Quick preview of Yɛn Egg Co design system">
+                  <span>Design Highlights</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: xLeidy -->
+          <article class="project-card project-card--xleidy card" data-category="commerce" id="project-xleidy">
+            <div class="project-visual-wrapper">
+              <img 
+                src="assets/images/xleidy.jpg" 
+                alt="xLeidy luxury fashion app UI with bespoke custom fit measurement guide on mobile and tablet" 
+                class="project-img" 
+                loading="lazy"
+                width="800"
+                height="450"
+              >
+              <div class="project-overlay-badge">
+                <span class="domain-tag">Luxury Lifestyle · Bespoke Tailoring</span>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <div class="project-meta-bar">
+                <span class="project-client">xLeidy Atelier</span>
+                <span class="meta-dot" aria-hidden="true">•</span>
+                <span class="project-role">Brand Identity &amp; Digital Commerce UX</span>
+              </div>
+
+              <h3 class="project-name">xLeidy</h3>
+              <p class="project-tagline">
+                Bespoke elegance made digital: Integrating interactive anatomy sizing guides with an editorial lookbook to eliminate custom apparel return friction.
+              </p>
+
+              <!-- Bespoke Color System Tagging -->
+              <div class="project-palette-preview" title="Project Visual Identity: Deep Navy, Dusty Rose, Soft Blush, White">
+                <span class="palette-swatch" style="background-color: #131926;" title="Night Navy (#131926)"></span>
+                <span class="palette-swatch" style="background-color: #D98C9A;" title="Dusty Rose (#D98C9A)"></span>
+                <span class="palette-swatch" style="background-color: #F7E8EB;" title="Soft Blush (#F7E8EB)"></span>
+                <span class="palette-swatch" style="background-color: #FFFFFF; border: 1px solid #ddd;" title="Pure White (#FFFFFF)"></span>
+                <span class="palette-desc">Bespoke Atelier System</span>
+              </div>
+
+              <div class="project-key-stats">
+                <div class="key-stat">
+                  <strong>-68%</strong>
+                  <span>Tailoring Sizing Return Rate</span>
+                </div>
+                <div class="key-stat">
+                  <strong>4.2 min</strong>
+                  <span>Avg. Editorial Lookbook Engagement</span>
+                </div>
+                <div class="key-stat">
+                  <strong>+38%</strong>
+                  <span>Cart-to-Checkout Conversion</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="btn btn-primary open-case-study-btn" data-project="xleidy" id="viewXleidyStudyBtn">
+                  <span>View Complete Case Study</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+                <button type="button" class="btn btn-ghost open-prototype-quickview" data-project="xleidy" aria-label="Quick preview of xLeidy design system">
+                  <span>Design Highlights</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: DESIGN METHODOLOGY & PROCESS (#FFFFFF) -->
+    <section class="section-philosophy bg-white" id="philosophy">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow-tag">
+            <span class="tag-accent-circle gold" aria-hidden="true"></span>
+            <span>How I Think &amp; Build</span>
+          </div>
+          <h2 class="section-title">
+            The Method: <span class="italic accent-navy">From ambiguity to intentional clarity</span>.
+          </h2>
+          <p class="section-subtitle">
+            Great UX is not decorated at the end; it is synthesized through rigorous inquiry, systems mapping, and iterative validation.
+          </p>
+        </div>
+
+        <div class="process-steps-grid">
+          <!-- Step 1 -->
+          <div class="process-step-card card">
+            <div class="step-num-badge">01</div>
+            <h3 class="step-title">Inquiry &amp; Immersion</h3>
+            <p class="step-desc">
+              I interview real stakeholders, observe behavioral bottlenecks in their native environment, and map the emotional friction points before generating solutions.
+            </p>
+            <ul class="step-checkmarks">
+              <li>Contextual stakeholder interviews</li>
+              <li>Cognitive load &amp; anxiety mapping</li>
+              <li>Competitive landscape heuristics</li>
+            </ul>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step-card card">
+            <div class="step-num-badge">02</div>
+            <h3 class="step-title">Information Architecture</h3>
+            <p class="step-desc">
+              Structuring data models, navigational hierarchies, and user journeys. My computer science background ensures data flow aligns cleanly with interface logic.
+            </p>
+            <ul class="step-checkmarks">
+              <li>Low-fidelity wireframing &amp; user flows</li>
+              <li>Entity relationship &amp; state diagrams</li>
+              <li>Error state &amp; edge case anticipation</li>
+            </ul>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step-card card">
+            <div class="step-num-badge">03</div>
+            <h3 class="step-title">Systemic UI &amp; Tokens</h3>
+            <p class="step-desc">
+              Building purposeful design systems with distinct domain personalities. Establishing typography scales, accessible color ratios, and component variables.
+            </p>
+            <ul class="step-checkmarks">
+              <li>Auto-layout design systems in Figma</li>
+              <li>WCAG 2.1 AA contrast compliance</li>
+              <li>Micro-interaction physics &amp; motion states</li>
+            </ul>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-step-card card">
+            <div class="step-num-badge">04</div>
+            <h3 class="step-title">Validation &amp; Code Hand-off</h3>
+            <p class="step-desc">
+              Testing interactive prototypes with users and producing structured developer hand-off specs that minimize implementation ambiguities.
+            </p>
+            <ul class="step-checkmarks">
+              <li>Interactive prototype usability tests</li>
+              <li>Design-to-code token alignment</li>
+              <li>Post-release user feedback synthesis</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Design Principles Banner -->
+        <div class="manifesto-card">
+          <div class="manifesto-inner">
+            <span class="manifesto-label">The Studio Standard</span>
+            <blockquote class="manifesto-quote">
+              “When deciding between something visually impressive and something clear, <span class="highlight">choose clarity</span>. Visual identity must elevate human capability, never obscure it.”
+            </blockquote>
+            <cite class="manifesto-author">— Janette Amoatemaa Sarfo</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: BACKGROUND & CREDENTIALS (#F8F6F1) -->
+    <section class="section-credentials bg-ivory" id="credentials">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow-tag">
+            <span class="tag-accent-circle rose" aria-hidden="true"></span>
+            <span>Technical &amp; Creative Foundation</span>
+          </div>
+          <h2 class="section-title">
+            Background &amp; <span class="italic accent-rose">Tooling</span>
+          </h2>
+          <p class="section-subtitle">
+            A cohesive toolkit combining Figma craftsmanship with modern web programming principles.
+          </p>
+        </div>
+
+        <div class="credentials-layout">
+          <!-- Experience & Education Timeline -->
+          <div class="timeline-column">
+            <h3 class="column-heading">
+              <span class="gold-sparkle" aria-hidden="true">✦</span> Academic &amp; Design Journey
+            </h3>
+
+            <div class="timeline-list">
+              <div class="timeline-item card">
+                <span class="timeline-year">2023 — Present</span>
+                <h4 class="timeline-role">BSc. Computer Science</h4>
+                <p class="timeline-org">University of Energy and Natural Resources (UENR)</p>
+                <p class="timeline-detail">
+                  Focusing on Human-Computer Interaction (HCI), Software Engineering, Data Structures &amp; Web Systems. Applying computational thinking to interface design.
+                </p>
+              </div>
+
+              <div class="timeline-item card">
+                <span class="timeline-year">2024 — Present</span>
+                <h4 class="timeline-role">UI/UX Designer &amp; Design Strategist</h4>
+                <p class="timeline-org">Independent Design Studio &amp; Freelance</p>
+                <p class="timeline-detail">
+                  Collaborating with academic departments, agricultural logistics startups, and lifestyle brands to engineer functional digital experiences and scalable design systems.
+                </p>
+              </div>
+
+              <div class="timeline-item card">
+                <span class="timeline-year">Ongoing Practice</span>
+                <h4 class="timeline-role">Accessibility &amp; Design Systems Research</h4>
+                <p class="timeline-org">Self-Directed Field Studies</p>
+                <p class="timeline-detail">
+                  Exploring high-stress digital ergonomics, offline-first African web performance, and multi-brand token workflows.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills & Tooling Grid -->
+          <div class="skills-column">
+            <h3 class="column-heading">
+              <span class="gold-sparkle" aria-hidden="true">✦</span> Craft &amp; Technical Capabilities
+            </h3>
+
+            <div class="skill-category-card card">
+              <h4 class="category-title">
+                <span class="bullet-navy" aria-hidden="true"></span> UI/UX Design &amp; Systems
+              </h4>
+              <ul class="skills-badges">
+                <li>Figma (Component Variants &amp; Autolayout)</li>
+                <li>Design Tokens &amp; Style Guides</li>
+                <li>Information Architecture</li>
+                <li>Wireframing &amp; Rapid Prototyping</li>
+                <li>Micro-Interactions &amp; Transitions</li>
+                <li>Design Audits &amp; Heuristic Evaluation</li>
+              </ul>
+            </div>
+
+            <div class="skill-category-card card">
+              <h4 class="category-title">
+                <span class="bullet-rose" aria-hidden="true"></span> Research &amp; Product Strategy
+              </h4>
+              <ul class="skills-badges">
+                <li>Qualitative User Interviews</li>
+                <li>Usability Testing &amp; Task Analysis</li>
+                <li>User Personas &amp; Journey Maps</li>
+                <li>Cognitive Load Reduction</li>
+                <li>Accessibility (WCAG 2.1 AA)</li>
+                <li>Stakeholder Alignment</li>
+              </ul>
+            </div>
+
+            <div class="skill-category-card card">
+              <h4 class="category-title">
+                <span class="bullet-periwinkle" aria-hidden="true"></span> CS &amp; Web Technologies
+              </h4>
+              <ul class="skills-badges">
+                <li>HTML5 &amp; Semantic Web</li>
+                <li>Modern CSS (Variables, Flexbox, Grid)</li>
+                <li>JavaScript (ES6+)</li>
+                <li>Git &amp; Version Control</li>
+                <li>Responsive Web Design</li>
+                <li>Component State Logic</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CONTACT / VISUAL BREAK (#17233C DEEP INK NAVY) -->
+    <section class="section-contact bg-navy" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left: Editorial Inquiries & Details -->
+          <div class="contact-editorial">
+            <div class="eyebrow-tag dark-mode">
+              <span class="tag-accent-circle gold" aria-hidden="true"></span>
+              <span>Inquiries &amp; Collaborations</span>
+            </div>
+
+            <h2 class="contact-title">
+              Let's create something <span class="italic accent-rose">thoughtful</span> together.
+            </h2>
+
+            <p class="contact-lead">
+              I am actively seeking UI/UX design internships, junior product design roles, and select freelance collaborations for 2026/2027.
+            </p>
+
+            <div class="contact-info-cards">
+              <!-- Direct Email Copy Card -->
+              <div class="contact-pill-card" id="emailCopyCard" role="button" tabindex="0" title="Click to copy email address">
+                <div class="pill-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="pill-content">
+                  <span class="pill-label">Direct Email (Click to copy)</span>
+                  <strong class="pill-value" id="displayEmail">janette.sarfo.design@gmail.com</strong>
+                </div>
+                <span class="copy-action-indicator" aria-label="Copy icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </span>
+              </div>
+
+              <!-- Location & Time Card -->
+              <div class="contact-pill-card static">
+                <div class="pill-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div class="pill-content">
+                  <span class="pill-label">Studio Location &amp; Time</span>
+                  <strong class="pill-value">Ghana (GMT) · <span id="desktopLocalTime">--:--:-- GMT</span></strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-channels">
+              <span class="social-label">Find me on:</span>
+              <div class="social-links-list">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <span>LinkedIn</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <span>GitHub</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <span>Dribbble</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Message Form -->
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="contactForm" novalidate>
+              <h3 class="form-title">Send a Direct Message</h3>
+              <p class="form-sub">Whether you have an upcoming project, role opening, or want to discuss design systems.</p>
+
+              <div class="form-group">
+                <label for="userName" class="form-label">Your Name <span class="required-star">*</span></label>
+                <input type="text" id="userName" name="name" class="form-input" placeholder="e.g. Ama Asante" required>
+                <span class="field-error" id="nameError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="userEmail" class="form-label">Email Address <span class="required-star">*</span></label>
+                <input type="email" id="userEmail" name="email" class="form-input" placeholder="e.g. ama@organization.com" required>
+                <span class="field-error" id="emailError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="projectType" class="form-label">Inquiry Focus</label>
+                <select id="projectType" name="projectType" class="form-input form-select">
+                  <option value="Internship / Full-time Role">Internship / Full-time Role</option>
+                  <option value="New Product Design Project">New Product Design Project</option>
+                  <option value="Design System Consulting">Design System Consulting</option>
+                  <option value="Academic Collaboration">Academic Collaboration</option>
+                  <option value="Casual Hello">Just saying hello</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage" class="form-label">Message <span class="required-star">*</span></label>
+                <textarea id="userMessage" name="message" class="form-input form-textarea" rows="4" placeholder="Tell me about your product, timeline, or design opportunity..." required></textarea>
+                <span class="field-error" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="btn btn-submit w-full" id="submitFormBtn">
+                <span>Send Message</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">Janette Amoatemaa Sarfo</span>
+        <span class="footer-sep">·</span>
+        <span class="footer-copy">© 2026. All rights reserved.</span>
+      </div>
+
+      <div class="footer-center">
+        <span class="footer-quote">Warm Digital Editorial · Crafted with Intentionality</span>
+      </div>
+
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top-link" aria-label="Back to top of page">
+          <span>Top</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CASE STUDY DETAIL MODAL -->
+  <div class="modal-backdrop" id="caseStudyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-header-meta">
+          <span class="modal-client-badge" id="modalClientBadge">Client Project</span>
+          <span class="modal-status-badge">Full Case Study</span>
+        </div>
+        <button type="button" class="modal-close-btn" id="closeCaseStudyBtn" aria-label="Close case study dialog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-body" id="modalBodyContent">
+        <!-- Injected via JavaScript dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUME PREVIEW MODAL -->
+  <div class="modal-backdrop" id="resumeModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+    <div class="modal-dialog modal-dialog--resume">
+      <div class="modal-header">
+        <div>
+          <h2 class="modal-title" id="resumeModalTitle">Janette Amoatemaa Sarfo — Resume</h2>
+          <span class="modal-subtitle">UI/UX Designer · Computer Science Student</span>
+        </div>
+        <button type="button" class="modal-close-btn" id="closeResumeBtn" aria-label="Close resume dialog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="resume-modal-body">
+        <div class="resume-paper">
+          <header class="resume-header">
+            <div>
+              <h3 class="resume-name">Janette Amoatemaa Sarfo</h3>
+              <p class="resume-role-tag">UI/UX Designer · Computer Science Undergrad (UENR)</p>
+            </div>
+            <div class="resume-contact-meta">
+              <span>Ghana (GMT)</span>
+              <span>janette.sarfo.design@gmail.com</span>
+              <span>Available for Internships 2026/2027</span>
+            </div>
+          </header>
+
+          <hr class="resume-divider">
+
+          <section class="resume-section">
+            <h4 class="resume-sec-title">Executive Summary</h4>
+            <p class="resume-text">
+              UI/UX designer with a foundational background in Computer Science at the University of Energy and Natural Resources (UENR). Specialized in designing complex digital systems, accessible interfaces, and e-commerce platforms. Merges cognitive user research with algorithmic feasibility to deliver high-impact interfaces and clean design token systems.
+            </p>
+          </section>
+
+          <section class="resume-section">
+            <h4 class="resume-sec-title">Core Competencies</h4>
+            <div class="resume-skills-row">
+              <div>
+                <strong>Design &amp; Prototyping:</strong>
+                <span>Figma (Advanced Auto-layout, Variants, Token Architecture), Wireframing, High-Fidelity UI, Interactive Micro-interactions, Heuristic Audits.</span>
+              </div>
+              <div>
+                <strong>Research &amp; Strategy:</strong>
+                <span>Contextual Inquiries, Usability Benchmarking, User Personas, Cognitive Load Assessment, WCAG 2.1 AA Accessibility Standards.</span>
+              </div>
+              <div>
+                <strong>Technical &amp; Engineering:</strong>
+                <span>HTML5, Modern CSS (Custom Properties, Flexbox, Grid), JavaScript (ES6+), Git/GitHub, Understanding of Component State &amp; APIs.</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="resume-section">
+            <h4 class="resume-sec-title">Featured Case Studies</h4>
+            <div class="resume-job">
+              <div class="resume-job-top">
+                <strong>UENR Examination Platform — Lead UI/UX Designer</strong>
+                <span class="resume-date">2024</span>
+              </div>
+              <p class="resume-text">
+                Spearheaded the redesign of the university's online examination portal for 15,000+ students. Eliminated cognitive friction under test conditions, designed auto-save indicators and question progress navigation, resulting in 99.8% completion rate and zero submission losses.
+              </p>
+            </div>
+
+            <div class="resume-job">
+              <div class="resume-job-top">
+                <strong>Yɛn Egg Co. — Product &amp; Mobile UX Designer</strong>
+                <span class="resume-date">2024</span>
+              </div>
+              <p class="resume-text">
+                Designed a farm-to-table supply subscription platform connecting local poultry producers to consumers. Built harvest calendar tracking and logistics dashboards, driving 3.4x repeat subscription retention.
+              </p>
+            </div>
+
+            <div class="resume-job">
+              <div class="resume-job-top">
+                <strong>xLeidy Atelier — Digital Commerce &amp; Brand UX</strong>
+                <span class="resume-date">2024</span>
+              </div>
+              <p class="resume-text">
+                Architected an interactive bespoke fashion e-commerce experience with dynamic anatomy measurement guides, cutting return rates by 68% and improving checkout conversion by 38%.
+              </p>
+            </div>
+          </section>
+
+          <section class="resume-section">
+            <h4 class="resume-sec-title">Education</h4>
+            <div class="resume-job">
+              <div class="resume-job-top">
+                <strong>BSc. Computer Science — University of Energy and Natural Resources (UENR)</strong>
+                <span class="resume-date">Expected 2026/2027</span>
+              </div>
+              <p class="resume-text">Relevant Coursework: Human-Computer Interaction, Data Structures &amp; Algorithms, Object-Oriented Programming, Web Systems, Database Management.</p>
+            </div>
+          </section>
+        </div>
+
+        <div class="resume-actions-bar">
+          <button type="button" class="btn btn-primary" id="printResumeBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print / Save as PDF</span>
+          </button>
+          <button type="button" class="btn btn-secondary" id="copyResumeLinkBtn">
+            <span>Copy Direct Link</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
