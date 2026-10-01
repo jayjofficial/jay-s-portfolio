@@ -55,10 +55,6 @@
 
       <!-- Right Action Group -->
       <div class="header-action-group">
-        <div class="status-indicator-badge" title="Currently open for UI/UX internships & collaborative projects">
-          <span class="status-dot"></span>
-          <span class="status-text">Available for 2026/2027</span>
-        </div>
         <button type="button" class="btn-resume-trigger" id="openResumeBtn" aria-label="View Resume & Qualifications">
           <span>CV / Resume</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
@@ -990,9 +986,13 @@
         </div>
 
         <div class="resume-actions-bar">
-          <button type="button" class="btn btn-primary" id="printResumeBtn">
+          <button type="button" class="btn btn-primary" id="downloadResumeFileBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span id="downloadResumeBtnLabel">Download Official PDF</span>
+          </button>
+          <button type="button" class="btn btn-secondary" id="printResumeBtn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-            <span>Print / Save as PDF</span>
+            <span>Print Web Version</span>
           </button>
           <button type="button" class="btn btn-secondary" id="copyResumeLinkBtn">
             <span>Copy Direct Link</span>

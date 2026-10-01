@@ -633,7 +633,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --------------------------------------------------------------------------
-  // 5. Resume Modal
+  // 5. Resume Modal & Dynamic Download Logic
   // --------------------------------------------------------------------------
   const resumeModal = document.getElementById('resumeModal');
   const openResumeBtn = document.getElementById('openResumeBtn');
@@ -641,8 +641,48 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeResumeBtn = document.getElementById('closeResumeBtn');
   const printResumeBtn = document.getElementById('printResumeBtn');
   const copyResumeLinkBtn = document.getElementById('copyResumeLinkBtn');
+  const downloadResumeFileBtn = document.getElementById('downloadResumeFileBtn');
+  const downloadResumeBtnLabel = document.getElementById('downloadResumeBtnLabel');
+
+  function triggerResumeDownload() {
+    const resume = portfolioData?.resume;
+    if (resume && resume.fileData) {
+      const a = document.createElement('a');
+      a.href = resume.fileData;
+      a.download = resume.fileName || 'Janette_Sarfo_Resume.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast('Downloading resume: ' + (resume.fileName || 'Janette_Sarfo_Resume.pdf'));
+      return;
+    }
+    if (resume && resume.externalUrl) {
+      window.open(resume.externalUrl, '_blank', 'noopener,noreferrer');
+      return;
+    }
+    // Fallback: print / save as PDF
+    window.print();
+  }
 
   function openResume() {
+    const resume = portfolioData?.resume;
+    // If direct action configured in dashboard and file/url exists, trigger directly
+    if (resume && resume.action === 'direct' && (resume.fileData || resume.externalUrl)) {
+      triggerResumeDownload();
+      return;
+    }
+
+    // Update download button label if file exists
+    if (downloadResumeBtnLabel) {
+      if (resume && resume.fileName) {
+        downloadResumeBtnLabel.textContent = `Download PDF (${resume.fileName})`;
+      } else if (resume && resume.externalUrl) {
+        downloadResumeBtnLabel.textContent = 'Open External Resume (PDF)';
+      } else {
+        downloadResumeBtnLabel.textContent = 'Download Official PDF';
+      }
+    }
+
     resumeModal.classList.add('open');
     resumeModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -660,6 +700,7 @@ document.addEventListener('DOMContentLoaded', () => {
   resumeModal?.addEventListener('click', (e) => {
     if (e.target === resumeModal) closeResume();
   });
+  if (downloadResumeFileBtn) downloadResumeFileBtn.addEventListener('click', triggerResumeDownload);
   if (printResumeBtn) printResumeBtn.addEventListener('click', () => window.print());
   if (copyResumeLinkBtn) {
     copyResumeLinkBtn.addEventListener('click', () => {
